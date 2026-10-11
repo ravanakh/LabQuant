@@ -4,11 +4,8 @@
 
 Quantitative stock simulation, risk analysis, and portfolio optimization explained in plain English.
 
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-Live-FF4B4B?logo=streamlit&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-> Try it here: **[Launch LabQuant](https://labquant.streamlit.app)**
+>### Try it here: **[Launch LabQuant](https://labquant.streamlit.app)**
 
 <p align="center">
   <img src="showcase-assets/dashboard.jpg" alt="LabQuant dashboard" width="900">
