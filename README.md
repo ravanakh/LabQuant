@@ -1,25 +1,39 @@
-# LabQuantSim
+# LabQuant
+
+> Try it here: **[Launch LabQuant](https://labquant.streamlit.app)**
 
 ### Understand the risk. Explore the return.
 
-**LabQuantSim** is an interactive quantitative-finance research dashboard that turns historical stock prices into possible future scenarios. It brings simulation, downside-risk analysis and portfolio diversification together with explanations designed for people without a quantitative-finance background.
+**LabQuant** is an interactive quantitative-finance research dashboard that turns historical stock prices into possible future scenarios. It brings simulation, downside-risk analysis and portfolio diversification together with explanations designed for people without a quantitative-finance background.
 
 > **This is the public showcase repository. The application source code is maintained in a separate private repository and is not included here.**
 
-**Live app:** Not deployed yet. The verified Streamlit link will be added here after deployment.
+## What you can do
 
-<!-- After deployment, replace the line above with:
-[Open LabQuantSim](https://YOUR-ACTUAL-APP-SUBDOMAIN.streamlit.app/)
-Do not insert a guessed or unverified address.
--->
+**LabQuant helps people explore a stock’s potential returns and risks using historical prices.** It shows a range of possible outcomes rather than how much someone is guaranteed to earn.
+
+Users can:
+
+- **Choose a stock and historical period** to analyze.
+- **Set an investment amount and future horizon**, such as investing $10,000 for one year.
+- **Compare five simulation models**, including Monte Carlo and historical sampling.
+- **See average and median simulated returns**, along with a range of possible ending investment values.
+- **Understand downside risk**, including the modeled chance of losing money, adverse scenarios, volatility and drawdowns.
+- **Compare portfolios of 2–5 assets** to explore how diversification changes estimated risk and return.
+
+For example:
+
+> *If I invest $10,000 in Apple for one year, what outcomes do these models suggest, and how much could I gain or lose?*
+
+LabQuant uses real historical prices for stock analysis. A synthetic sample mode is also available for demonstration. Results depend on the selected historical period and model assumptions, so they should be treated as educational scenarios rather than reliable forecasts.
 
 ## A look inside
 
 The screenshots below show the actual local Streamlit application running **synthetic sample data**, not live stock forecasts.
 
-![LabQuantSim simulation dashboard](assets/dashboard.jpg)
+![LabQuant simulation dashboard](showcase-assets/dashboard.jpg)
 
-![Portfolio analysis and efficient frontier](assets/portfolio.jpg)
+![Portfolio analysis and efficient frontier](showcase-assets/portfolio.jpg)
 
 ## Features
 
@@ -34,13 +48,8 @@ The screenshots below show the actual local Streamlit application running **synt
 - Optionally request free historical data and view a separate TradingView reference chart.
 - Read short explanations and limitations beside the results.
 
-## Architecture
 
-![Private source, public app, public showcase architecture](assets/architecture.svg)
-
-The **private GitHub repository** holds the Python application, numerical models, tests and dependencies. Streamlit Community Cloud runs that repository as a **public website**. Visitors interact with the app without receiving repository access. This separate **public showcase** contains documentation and presentation assets only.
-
-Streamlit and authorized repository collaborators necessarily have access to the source required to run and administer the app. The app's public viewing setting does not change the GitHub repository's visibility.
+The **private GitHub repository** contains the Python application, quantitative models, tests and dependencies. Streamlit Community Cloud deploys that repository as a **public website**, while the source code remains private. This public showcase repository contains documentation and presentation assets only.
 
 ## Tech stack
 
@@ -73,14 +82,14 @@ No paid hosting, database or paid API is required for the sample/CSV experience.
 
 All models are conditional on their inputs and assumptions. Agreement between models is not independent evidence: they reuse the same history. Percentile bands describe simulated variability, not certainty about future stock performance.
 
-## Roadmap
+## Roadmap / Future updates
 
 - [x] Python/Streamlit research dashboard
 - [x] Five simulation models and model explanations
 - [x] Downside-risk measures and interactive charts
 - [x] Efficient frontier, allocations and correlations
 - [x] CSV import, reproducible reports and numerical tests
-- [ ] Publish the first public Streamlit deployment
+- [x] Publish the first public Streamlit deployment
 - [ ] Add walk-forward evaluation and parameter uncertainty
 - [ ] Fit and validate volatility-model parameters
 - [ ] Expand currency and corporate-action handling
@@ -94,7 +103,7 @@ The optional Yahoo connector is unofficial and may be unavailable or rate-limite
 
 ## Disclaimer
 
-LabQuantSim is an educational research project, not financial advice, a reliable forecasting service, or an automated trading system. Historical performance does not guarantee future results. Models can omit structural changes, liquidity, fees, taxes and events absent from the sample. No recommendation to buy or sell any security is made.
+LabQuant is an educational research project created by me (Ravan Akhundov), not financial advice, a reliable forecasting service, or an automated trading system. Historical performance does not guarantee future results. Models can omit structural changes, liquidity, fees, taxes and events absent from the sample. No recommendation to buy or sell any security is made.
 
 ## Repository scope
 
