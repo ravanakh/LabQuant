@@ -1,10 +1,18 @@
 # LabQuant
 
-> Try it here: **[Launch LabQuant](https://labquant.streamlit.app)**
-
 ### Understand the risk. Explore the return.
 
-**LabQuant** is an interactive quantitative-finance research dashboard that turns historical stock prices into possible future scenarios. It brings simulation, downside-risk analysis and portfolio diversification together with explanations designed for people without a quantitative-finance background.
+Quantitative stock simulation, risk analysis, and portfolio optimization explained in plain English.
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Live-red)
+![Status](https://img.shields.io/badge/status-active-success)
+
+> Try it here: **[Launch LabQuant](https://labquant.streamlit.app)**
+
+![LabQuant dashboard](showcase-assets/dashboard.jpg)
+
+**LabQuant** is an interactive quantitative finance research dashboard that turns historical stock prices into possible future scenarios. It brings simulation, downside-risk analysis and portfolio diversification together with explanations designed for people without a quantitative-finance background.
 
 > **This is the public showcase repository. The application source code is maintained in a separate private repository and is not included here.**
 
