@@ -34,9 +34,22 @@ For example:
 
 LabQuant uses real historical prices for stock analysis. A synthetic sample mode is also available for demonstration. Results depend on the selected historical period and model assumptions, so they should be treated as educational scenarios rather than reliable forecasts.
 
+## Recent additions
+
+- **A simpler starting point:** guided questions help new users explore stock ideas; direct research tools remain available when needed.
+- **Portfolio Builder for 2–12 assets:** compare equal-weight and minimum-volatility allocations, with results organized into Allocation, Risk checks, Scenarios and Reports.
+- **Historical backtesting and stress testing:** examine allocation rules through time, including trading costs, or explore explicit shocks and historical windows.
+- **Deeper diversification checks:** compare relationships across all days and reference-down days, with sample counts and uncertainty estimates.
+- **Historical reference exposure:** explore each holding’s sensitivity to a selected reference asset, check the relationship on later data, and inspect how it changes over time.
+- **Clearer research workflows:** saved session inputs, outdated-result notices, explicit Run actions, and layouts checked on desktop and phones in light and dark themes.
+
+These additions support research, not automated trading or guaranteed-return recommendations. The guided shortlist screens a defined stock universe; it is not a whole-market search or an assessment of political/news impact.
+
 ## A look inside
 
-The screenshots below show the actual local Streamlit application running **synthetic sample data**, not live stock forecasts.
+The screenshots below show the local Streamlit interface. Financial charts use **synthetic sample data**, not live stock forecasts. The Home preview reflects the recent design updates; the other screenshots show earlier analytical views.
+
+![Beginner-friendly LabQuant Home with a single guided starting action](showcase-assets/home.png)
 
 ![LabQuant simulation dashboard](showcase-assets/dashboard.jpg)
 
@@ -87,6 +100,10 @@ No paid hosting, database or paid API is required for the sample/CSV experience.
 
 **Efficient frontier analysis** estimates the lowest-volatility, fully invested, long-only portfolio at each target return. It uses shared historical dates and estimated correlations. The reported highest-Sharpe allocation is selected from the displayed frontier points.
 
+**Diversification diagnostics** compare asset-pair correlations across all observed days and days when a selected reference fell. Shared losses are measured separately; neither statistic is the probability that an entire portfolio will lose money.
+
+**Reference exposure** fits a single-reference relationship on earlier daily returns and checks its frozen coefficients on a later period. Uncertainty intervals and trailing-window sensitivity charts help show estimation limits. The later-period check uses realized same-day reference returns: it is not an advance forecast, causal explanation, or full economic-factor model.
+
 All models are conditional on their inputs and assumptions. Agreement between models is not independent evidence: they reuse the same history. Percentile bands describe simulated variability, not certainty about future stock performance.
 
 ## Roadmap / Future updates
@@ -97,7 +114,10 @@ All models are conditional on their inputs and assumptions. Agreement between mo
 - [x] Efficient frontier, allocations and correlations
 - [x] CSV import, reproducible reports and numerical tests
 - [x] Publish the first public Streamlit deployment
-- [ ] Add walk-forward evaluation and parameter uncertainty
+- [x] Historical walk-forward backtesting and explicit stress scenarios
+- [x] Down-market diversification checks and reference-exposure uncertainty
+- [x] Guided discovery and beginner-focused navigation
+- [ ] Broaden out-of-sample validation and model-uncertainty analysis
 - [ ] Fit and validate volatility-model parameters
 - [ ] Expand currency and corporate-action handling
 - [ ] Improve accessible chart summaries and data-quality diagnostics
